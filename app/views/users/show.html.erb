@@ -3,12 +3,7 @@
     <% @tweets.each do |tweet| %>
       <div class="content_post" style="background-image: url(<%= tweet.image %>);">
         <%= simple_format(tweet.text) %>
-        <span class="name">
-          <%#= tweet.user.nickname %>
-          <a href="">
-            <span>投稿者</span><%= tweet.user.nickname %>
-          </a>
-        </span>
+        <span class="name"><%= tweet.name %></span>
       </div>
     <% end %>
     <%= paginate(@tweets) %>
