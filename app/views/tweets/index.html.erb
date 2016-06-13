@@ -7,6 +7,7 @@
           <ul class="more_list">
             <li>
               <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
+              <%#= link_to '詳細', tweet_path, method: :get %>
             </li>
         <!-- ユーザーがログインしている場合、編集と削除画面も表示する -->
         <% if user_signed_in? && current_user.id == tweet.user_id %>
